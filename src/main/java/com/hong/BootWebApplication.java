@@ -1,17 +1,8 @@
 package com.hong;
 
-import com.hong.domain.Board;
-import com.hong.domain.User;
-import com.hong.domain.enums.BoardType;
-import com.hong.repository.BoardRepository;
-import com.hong.repository.UserRepository;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
-import java.time.LocalDateTime;
-import java.util.stream.IntStream;
 
 /**
  * Created by hong2 on 09/11/2018

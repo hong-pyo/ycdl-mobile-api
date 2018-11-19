@@ -1,6 +1,7 @@
 package com.hong.domain;
 
 import com.hong.domain.enums.BoardType;
+import io.swagger.annotations.ApiModel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @Table
+@ApiModel(value = "게시판 보드")
 public class Board implements Serializable {
 
     @Id
