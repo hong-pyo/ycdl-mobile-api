@@ -8,6 +8,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by hong2 on 06/11/2018
  * Time : 1:16 AM
@@ -25,5 +27,9 @@ public class BoardService {
 
     public Board findBoardByIdx(Long idx) {
         return boardRepository.findById(idx).orElse(new Board());
+    }
+
+    public List<Board> getBoards() {
+        return boardRepository.findAll();
     }
 }
