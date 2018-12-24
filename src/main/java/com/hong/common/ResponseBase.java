@@ -1,6 +1,7 @@
 package com.hong.common;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.hong.common.constant.RCodeContant;
 import lombok.Data;
 
 /**
@@ -11,9 +12,9 @@ import lombok.Data;
 @SuppressWarnings("PMD.UnusedPrivateField")
 public abstract class ResponseBase<T> {
     @JsonProperty("rCode")
-    private String code = ErrorCodes.SUCCESS;
+    private String code = RCodeContant.CODE.SUCCESS;
     @JsonProperty("rMessage")
-    private String message = ErrorMessages.SUCCESS;
+    private String message = RCodeContant.MSG.SUCCESS;
     @JsonProperty("rData")
     private T data;
 }
