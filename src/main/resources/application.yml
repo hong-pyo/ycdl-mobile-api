@@ -10,6 +10,8 @@ spring:
     username: root
     password: Hong9201$
   profiles: local
+  jackson:
+    serialization.fail-on-empty-beans: false
 ---
 spring:
   jpa:
@@ -22,3 +24,5 @@ spring:
     url: jdbc:mysql://ycdlmysql.cnifrwbhjfrb.ap-northeast-2.rds.amazonaws.com/miero?useUnicode=true&characterEncoding=utf-8
     username: hong2
     password: Hong9201$
+  jackson:
+    serialization.fail-on-empty-beans: false

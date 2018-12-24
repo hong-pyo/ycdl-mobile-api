@@ -1,5 +1,6 @@
 package com.hong.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.hong.domain.enums.BoardType;
 import io.swagger.annotations.ApiModel;
 import lombok.Builder;
