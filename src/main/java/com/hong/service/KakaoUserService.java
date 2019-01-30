@@ -49,6 +49,8 @@ public class KakaoUserService {
     private void updateUserInfo(Optional<KakaoUserInfo> kakaoUserInfo) {
         KakaoUserInfo userInfo = kakaoUserInfo.get();
         userInfo.setLatestVisitDate(LocalDateTime.now());
+        userInfo.setProfileImagePath(userInfo.getProfileImagePath());
+        userInfo.setThumbnailImagePath(userInfo.getProfileImagePath());
         userInfo.setVisited(userInfo.getVisited() + 1);
         kakaoUserInfoRepository.save(userInfo);
     }
