@@ -55,7 +55,7 @@ public class JpaMappingTest {
                 .build());
     }
 
-    /*@Test
+    @Test
     public void 제대로_생성됐는지_테스트() {
         User user = userRepository.findByEmail(email);
 
@@ -68,5 +68,5 @@ public class JpaMappingTest {
         assertThat(board.getSubTitle(), is("sub title"));
         assertThat(board.getContent(), is("contents"));
         assertThat(board.getBoardType(), is(BoardType.free));
-    }*/
+    }
 }
