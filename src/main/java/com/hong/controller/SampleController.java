@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SampleController {
 
     @Autowired
-    BoardService boardService;
+    private BoardService boardService;
 
     @ApiOperation(value = "샘플조회", notes = "<pre>샘플 정보를 조회하여 응답")
     @RequestMapping(value = "/board/{idx}", method = RequestMethod.GET)
