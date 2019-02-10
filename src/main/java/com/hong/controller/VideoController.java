@@ -2,6 +2,7 @@ package com.hong.controller;
 
 import com.hong.common.ResponseBase;
 import com.hong.domain.SimpleResponse;
+import com.hong.domain.VideoCategory;
 import com.hong.service.VideoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -27,10 +28,10 @@ public class VideoController {
     @ApiOperation(value = "video cateogry 조회", notes = "<pre> video list 전체 조회")
     @RequestMapping(value = "/category/all", method = RequestMethod.GET)
     public ResponseBase getVideoCategory() {
-        ResponseBase<List<String>> result = new SimpleResponse<>();
-        List<String> categoryList = videoService.getVideoCategoryList();
+        ResponseBase<List<VideoCategory>> result = new SimpleResponse<>();
+        List<VideoCategory> videoCategories = videoService.getVideoCategoryList();
 
-        result.setData(categoryList);
+        result.setData(videoCategories);
 
         return result;
 

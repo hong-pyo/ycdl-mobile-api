@@ -1,7 +1,7 @@
 package com.hong.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -32,6 +32,7 @@ public class VideoCategory implements Serializable {
     @Column
     private String displayTitle;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "videoCategory")
     private List<VideoContent> videoContent = new ArrayList<>();
 }
