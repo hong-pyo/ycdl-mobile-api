@@ -1,6 +1,6 @@
 package com.hong.repository;
 
-import com.hong.domain.VideoCategory;
+import com.hong.domain.video.VideoCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

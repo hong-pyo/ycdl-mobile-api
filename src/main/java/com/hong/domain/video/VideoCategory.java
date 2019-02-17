@@ -1,4 +1,4 @@
-package com.hong.domain;
+package com.hong.domain.video;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
@@ -33,7 +33,7 @@ public class VideoCategory implements Serializable {
     private String displayTitle;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "videoCategory")
+    @OneToMany(mappedBy = "videoCategory", targetEntity = VideoContent.class)
     private List<VideoContent> videoContent = new ArrayList<>();
 }
 

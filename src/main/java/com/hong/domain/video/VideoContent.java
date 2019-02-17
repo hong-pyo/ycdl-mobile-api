@@ -1,9 +1,9 @@
-package com.hong.domain;
+package com.hong.domain.video;
 
 import io.swagger.annotations.ApiModel;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
  * Time : 3:55 PM
  */
 
+@Setter
 @Getter
 @Entity
 @NoArgsConstructor
@@ -34,6 +35,9 @@ public class VideoContent {
     private String answer;
 
     @Column
+    private String link;
+
+    @Column
     private Long level;
 
     @Column
@@ -51,7 +55,7 @@ public class VideoContent {
     @Column
     private LocalDateTime updatedDate;
 
-    @ManyToOne
-    @JoinColumn(name = "video_category_id", insertable = false, updatable = false)
+    @ManyToOne(targetEntity = VideoCategory.class)
+    @JoinColumn(name = "video_category_idx")
     private VideoCategory videoCategory;
 }
