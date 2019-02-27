@@ -6,9 +6,12 @@ import com.hong.repository.VideoContentsRepository;
 import com.hong.repository.VideoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.thymeleaf.util.ListUtils;
 
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by hong2 on 04/02/2019
@@ -40,5 +43,15 @@ public class VideoService {
 
     public VideoCategory addCategory(VideoCategory videoCategory) {
         return videoRepository.save(videoCategory);
+    }
+
+    public VideoContent getVideoLink(Long idx) {
+        List<VideoContent> contents = videoContentsRepository.findAllByVideoCategory_Idx(idx);
+        if (ListUtils.isEmpty(contents)) {
+            return null;
+        }
+
+        Collections.shuffle(contents);
+        return contents.get(0);
     }
 }
