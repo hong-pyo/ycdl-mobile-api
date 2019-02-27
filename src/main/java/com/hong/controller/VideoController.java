@@ -2,22 +2,19 @@ package com.hong.controller;
 
 import com.hong.common.ResponseBase;
 import com.hong.common.util.HongStringUtil;
-import com.hong.domain.KakaoUserInfo;
 import com.hong.domain.SimpleResponse;
 import com.hong.domain.video.VideoCategory;
 import com.hong.domain.video.VideoContent;
 import com.hong.service.VideoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -56,6 +53,15 @@ public class VideoController {
     public ResponseBase addVideoLink(@RequestBody VideoContent videoContent) {
         ResponseBase<VideoContent> result = new SimpleResponse<>();
         result.setData(videoService.addVideoLink(videoContent));
+        return result;
+    }
+
+    @ApiOperation(value = "video link list 조회 find first one", notes = "<pre> video list link get find one")
+    @RequestMapping(value = "/link/{idx}", method = RequestMethod.GET)
+    public ResponseBase getVideoLink(@ApiParam(required = true, name = "idx", value = "video category id")
+                                         @PathVariable Long idx) {
+        ResponseBase<VideoContent> result = new SimpleResponse<>();
+        result.setData(videoService.getVideoLink(idx));
         return result;
     }
 }
