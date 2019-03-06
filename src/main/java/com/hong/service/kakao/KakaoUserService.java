@@ -1,10 +1,9 @@
-package com.hong.service;
+package com.hong.service.kakao;
 
-import com.hong.domain.KakaoUserInfo;
+import com.hong.domain.kakao.KakaoUserInfo;
 import com.hong.repository.KakaoUserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.NumberUtils;
 
 import java.time.LocalDateTime;
 import java.util.Optional;

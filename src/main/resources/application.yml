@@ -6,7 +6,7 @@ spring:
     database: mysql
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/miero?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/miero?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: Hong9201$
   profiles: local
@@ -21,7 +21,7 @@ spring:
     database: mysql
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://ycdlmysql.cnifrwbhjfrb.ap-northeast-2.rds.amazonaws.com/miero?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://ycdlmysql.cnifrwbhjfrb.ap-northeast-2.rds.amazonaws.com/miero?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: hong2
     password: Hong9201$
   jackson:

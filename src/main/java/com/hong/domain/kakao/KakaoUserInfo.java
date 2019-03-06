@@ -1,4 +1,4 @@
-package com.hong.domain;
+package com.hong.domain.kakao;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

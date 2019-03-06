@@ -1,6 +1,6 @@
 package com.hong.repository;
 
-import com.hong.domain.KakaoUserInfo;
+import com.hong.domain.kakao.KakaoUserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
