@@ -15,10 +15,10 @@ public class KakaoLinkMessageService {
 
     public LinkMessage getLinkMesage(KakaoUserInfo kakaoUserVO) {
         String title = "YCDL 알리기";
-        String imageUrl = "http://k.kakaocdn.net/dn/4Gh9a/btqs1Q4Jn6u/zBCbKIpCaSxdqioDcZH8fk/kakaolink40_original.png";
+        String imageUrl = "http://k.kakaocdn.net/dn/b0F7KT/btqtaWcoCYt/9G6U2gWw1UbyszhrRSN3k1/kakaolink40_original.png";
         String webUrl = "";
         String appUrl = "";
-        String descriptionFormat = "%s 님꼐서 당신을 YCDL 로 초대하였습니다."; /*+
+        String descriptionFormat = "%s 님께서 당신을 YCDL 로 초대하였습니다."; /*+
                 " \n YCDL 로 구화학습을 해보세요~" +
                 "\n YCDL 은 You Can (Do) Listen 의 줄임말로 " +
                 "\n 당신도 들을 수 있다!, 당신도 듣다! 입니다.";*/
