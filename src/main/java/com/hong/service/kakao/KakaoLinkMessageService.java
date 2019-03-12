@@ -16,8 +16,8 @@ public class KakaoLinkMessageService {
     public LinkMessage getLinkMesage(KakaoUserInfo kakaoUserVO) {
         String title = "YCDL 알리기";
         String imageUrl = "http://k.kakaocdn.net/dn/b0F7KT/btqtaWcoCYt/9G6U2gWw1UbyszhrRSN3k1/kakaolink40_original.png";
-        String webUrl = "";
-        String appUrl = "";
+        String webUrl = "https://play.google.com/store/apps/details?id=com.hong2.ycdl2";
+        String appUrl = "https://play.google.com/store/apps/details?id=com.hong2.ycdl2";
         String descriptionFormat = "%s 님께서 당신을 YCDL 로 초대하였습니다."; /*+
                 " \n YCDL 로 구화학습을 해보세요~" +
                 "\n YCDL 은 You Can (Do) Listen 의 줄임말로 " +
